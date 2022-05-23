@@ -1,0 +1,8 @@
+title,name,component_attachment,property_template,value_template,datatype,value_transformation
+Ethnicity,ethnicity,qb:dimension,http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity,http://ios-regensburg.de/ethnodoc/def/concept/group/{ethnicity},string,
+Year,year,qb:dimension,http://purl.org/linked-data/sdmx/2009/dimension#refPeriod,http://reference.data.gov.uk/id/year/{year},string,
+Country,country,qb:dimension,http://purl.org/linked-data/sdmx/2009/dimension#refArea,https://d-nb.info/gnd/{country},string,
+Measure Type,measure_type,qb:dimension,http://purl.org/linked-data/cube#measureType,http://ios-regensburg.de/ethnodoc/def/measure/{measure_type},string,slugize
+Unit,unit,qb:attribute,http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure,http://qudt.org/vocab/unit/{unit},string,
+Value,value,,http://ios-regensburg.de/ethnodoc/def/measure/{measure_type},,string,
+Population,population,qb:measure,http://ios-regensburg.de/ethnodoc/def/measure/population,,string,

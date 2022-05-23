@@ -1,0 +1,24 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?concept a skos:Concept ;
+    rdfs:label ?Label ;
+    skos:inScheme <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+    skos:notation ?Notation ;
+    skos:prefLabel ?Label ;
+    skos:altLabel ?AltLabel ;
+    skos:broader ?broader ;
+    skos:related ?related ;
+    skos:exactMatch ?wd .
+} 
+FROM <groups_enriched.csv> 
+WHERE {
+  BIND (URI(CONCAT('http://ios-regensburg.de/ethnodoc/def/concept/group/', ?Notation)) 
+    AS ?concept)
+  BIND (URI(CONCAT('http://ios-regensburg.de/ethnodoc/def/concept/group/', ?ParentNotation)) 
+    AS ?broader)
+  BIND (URI(CONCAT('http://ios-regensburg.de/ethnodoc/def/concept/group/', ?Related)) 
+    AS ?related)
+  BIND (URI(CONCAT('http://www.wikidata.org/entity/', ?Wikidata)) AS ?wd)
+}
