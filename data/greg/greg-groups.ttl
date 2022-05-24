@@ -1,0 +1,68 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix greg-group: <http://ios-regensburg.de/greg/def/concept/group/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://ios-regensburg.de/greg/def/concept-scheme/group> a skos:ConceptScheme;
+  dcterms:title "Ethnic Groups"@en;
+  rdfs:label "Ethnic Groups"@en .
+
+greg-group:398 a skos:Concept;
+  skos:prefLabel "Germans"@en;
+  skos:altLabel "Germans"@en;
+  skos:exactMatch wd:Q42884;
+  skos:notation "398";
+  rdfs:label "Germans";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:401 a skos:Concept;
+  skos:prefLabel "Gipsies"@en;
+  skos:altLabel "Gipsies (Romanies)"@en;
+  skos:exactMatch wd:Q8060;
+  skos:notation "401";
+  rdfs:label "Gipsies";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:1255 a skos:Concept;
+  skos:prefLabel "Jews"@en;
+  skos:altLabel "Jews"@en;
+  skos:scopeNote "General group for Jews when there is no further specification given."@en;
+  skos:exactMatch wd:Q7325;
+  skos:notation "1255";
+  rdfs:label "Jews";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:1256 a skos:Concept;
+  skos:prefLabel "Arabs"@en;
+  skos:altLabel "Arabs"@en;
+  skos:scopeNote "General group for Arabs when there is no further specification given."@en;
+  skos:exactMatch wd:Q35323;
+  skos:notation "1256";
+  rdfs:label "Arabs";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:1257 a skos:Concept;
+  skos:prefLabel "Chini"@en;
+  skos:altLabel "Chini"@en;
+  skos:scopeNote "Translation missing in the Atlas."@en;
+  skos:exactMatch wd:Q24040442;
+  skos:notation "1257";
+  rdfs:label "Chini";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:1258 a skos:Concept;
+  skos:prefLabel "Yugoslavs"@en;
+  skos:altLabel "Yugoslavs"@en;
+  skos:scopeNote "Combined group for all Yugoslavs. Used for the USSR."@en;
+  skos:exactMatch wd:Q236807;
+  skos:notation "1258";
+  rdfs:label "Yugoslavs";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
+
+greg-group:1251 a skos:Concept;
+  skos:prefLabel "Others and Unknown"@en;
+  skos:altLabel "Others and Unknown - dummy group"@en;
+  skos:notation "1251";
+  rdfs:label "Others and Unknown";
+  skos:inScheme "<http://ios-regensburg.de/greg/def/concept-scheme/group>" .
