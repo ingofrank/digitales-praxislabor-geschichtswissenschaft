@@ -1,0 +1,408 @@
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> a skos:ConceptScheme ;
+  dcterms:title "Ethnic Groups"@en ;
+  rdfs:label "Ethnic Groups"@en ;
+  skos:hasTopConcept <http://ios-regensburg.de/ethnodoc/def/concept/group/99> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/99>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Insgesamt" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "99" ;
+        skos:prefLabel   "Insgesamt" ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q41710> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/04>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ägypter" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "04" ;
+        skos:prefLabel   "Ägypter" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q805039> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/05>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Albaner" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "05" ;
+        skos:prefLabel   "Albaner" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q179248> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/07>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Armenier" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "07" ;
+        skos:prefLabel   "Armenier" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q79797> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/09>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Aromunen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "09" ;
+        skos:prefLabel   "Aromunen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q201111> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/08>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ashkali" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "08" ;
+        skos:prefLabel   "Ashkali" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q282427> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/10>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Bosniaken" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "10" ;
+        skos:prefLabel   "Bosniaken" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q940348> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/11>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Bulgaren" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "11" ;
+        skos:prefLabel   "Bulgaren" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q133255> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/13>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Bunjewatzen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "13" ;
+        skos:prefLabel   "Bunjewatzen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q591964> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/15>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Deutsche" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "15" ;
+        skos:prefLabel   "Deutsche" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q42884> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/17>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Gagausen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "17" ;
+        skos:prefLabel   "Gagausen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q180361> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/18>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Goranci" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "18" ;
+        skos:prefLabel   "Goranci" ;
+        skos:altLabel    "Gorani" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q851126> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/21>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Italiener" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "21" ;
+        skos:prefLabel   "Italiener" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q50001> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/23>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Juden" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "23" ;
+        skos:prefLabel   "Juden" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q7325> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/32>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Jugoslawen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "32" ;
+        skos:prefLabel   "Jugoslawen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q236807> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/25>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Karakatschanen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "25" ;
+        skos:prefLabel   "Karakatschanen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q841744> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/27>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Kroaten" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "27" ;
+        skos:prefLabel   "Kroaten" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q167420> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/29>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ladiner" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "29" ;
+        skos:prefLabel   "Ladiner" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q1799968> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/33>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Makedonier" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "33" ;
+        skos:prefLabel   "Makedonier" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q2436423> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/35>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Montenegriner" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "35" ;
+        skos:prefLabel   "Montenegriner" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q19109> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/37>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Muslime" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "37" ;
+        skos:prefLabel   "Muslime" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q1137457> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/39>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Polen (ethnische Gruppe)" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "39" ;
+        skos:prefLabel   "Polen (ethnische Gruppe)" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q1026> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/41>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Pomaken" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "41" ;
+        skos:prefLabel   "Pomaken" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q38915> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/43>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Rumänen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "43" ;
+        skos:prefLabel   "Rumänen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q485150> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/45>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Russen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "45" ;
+        skos:prefLabel   "Russen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q49542> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/47>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ruthenen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "47" ;
+        skos:prefLabel   "Ruthenen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:related     <http://ios-regensburg.de/ethnodoc/def/concept/group/73> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q690869> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/49>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Serben" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "49" ;
+        skos:prefLabel   "Serben" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q127885> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/51>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Slawen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "51" ;
+        skos:prefLabel   "Slawen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q40477> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/53>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Slowaken" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "53" ;
+        skos:prefLabel   "Slowaken" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q171336> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/55>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Slowenen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "55" ;
+        skos:prefLabel   "Slowenen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q15863> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/79>
+        rdf:type        skos:Concept ;
+        rdfs:label      "Sonstige ethnische Gruppen" ;
+        skos:inScheme   <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation   "79" ;
+        skos:prefLabel  "Sonstige ethnische Gruppen" ;
+        skos:broader    <http://ios-regensburg.de/ethnodoc/def/concept/group/99> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/57>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Sopi" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "57" ;
+        skos:prefLabel   "Sopi" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q3623724> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/59>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Südslawen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "59" ;
+        skos:prefLabel   "Südslawen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q273824> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/61>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Tataren" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "61" ;
+        skos:prefLabel   "Tataren" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q35565> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/63>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Torbeschen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "63" ;
+        skos:prefLabel   "Torbeschen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q1262476> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/65>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Tschechen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "65" ;
+        skos:prefLabel   "Tschechen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q170217> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/67>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Tscherkessen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "67" ;
+        skos:prefLabel   "Tscherkessen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q15763> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/71>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Türken" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "71" ;
+        skos:prefLabel   "Türken" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q84072> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/69>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Turkmenen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "69" ;
+        skos:prefLabel   "Turkmenen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q484472> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/73>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ukrainer" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "73" ;
+        skos:prefLabel   "Ukrainer" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:related     <http://ios-regensburg.de/ethnodoc/def/concept/group/47> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q44806> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/31>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Ungarn" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "31" ;
+        skos:prefLabel   "Ungarn" ;
+        skos:altLabel    "Magyaren" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q133032> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/74>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Weißrussen" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "74" ;
+        skos:prefLabel   "Weißrussen" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q483569> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/75>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Yürüken" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "75" ;
+        skos:prefLabel   "Yürüken" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q170056> .
+
+<http://ios-regensburg.de/ethnodoc/def/concept/group/77>
+        rdf:type         skos:Concept ;
+        rdfs:label       "Zigeuner" ;
+        skos:inScheme    <http://ios-regensburg.de/ethnodoc/def/concept-scheme/group> ;
+        skos:notation    "77" ;
+        skos:prefLabel   "Zigeuner" ;
+        skos:altLabel    "Roma" ;
+        skos:broader     <http://ios-regensburg.de/ethnodoc/def/concept/group/99> ;
+        skos:exactMatch  <http://www.wikidata.org/entity/Q8060> .
