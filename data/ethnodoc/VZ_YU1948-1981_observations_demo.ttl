@@ -1,0 +1,1013 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1> a qb:DataSet;
+  dcterms:title "VZ YU1948-1981 Dataset"@en;
+  qb:structure <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/structure>;
+  rdfs:label "VZ YU1948-1981 Dataset"@en .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/structure> a qb:DataStructureDefinition;
+  dcterms:title "VZ YU1948-1981 Dataset (Data Structure Definition)"@en;
+  qb:component <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/country>,
+    <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/ethnicity>,
+    <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/measure_type>,
+    <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/population>,
+    <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/unit>, <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/year>;
+  rdfs:label "VZ YU1948-1981 Dataset (Data Structure Definition)"@en .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/ethnicity>
+  a qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>;
+  qb:dimension <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/measure_type>
+  a qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>;
+  qb:dimension qb:measureType .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/year> a qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year>;
+  qb:dimension sdmx-dimension:refPeriod .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/country> a
+    qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>;
+  qb:dimension sdmx-dimension:refArea .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/unit> a qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit>;
+  qb:attribute sdmx-attribute:unitMeasure .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/component/population>
+  a qb:ComponentSpecification;
+  <http://publishmydata.com/def/qb/codesUsed> <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/population>;
+  qb:measure <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  a skos:Collection;
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/05>, <http://ios-regensburg.de/ethnodoc/def/concept/group/15>,
+    <http://ios-regensburg.de/ethnodoc/def/concept/group/27>, <http://ios-regensburg.de/ethnodoc/def/concept/group/33>,
+    <http://ios-regensburg.de/ethnodoc/def/concept/group/35>, <http://ios-regensburg.de/ethnodoc/def/concept/group/37>,
+    <http://ios-regensburg.de/ethnodoc/def/concept/group/49>, <http://ios-regensburg.de/ethnodoc/def/concept/group/53>,
+    <http://ios-regensburg.de/ethnodoc/def/concept/group/77>, <http://ios-regensburg.de/ethnodoc/def/concept/group/79> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  a skos:Collection;
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> a skos:Collection;
+  skos:member <http://reference.data.gov.uk/id/year/1948>, <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  a skos:Collection;
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> a skos:Collection;
+  skos:member <http://qudt.org/vocab/unit/Person>, <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/population>
+  a skos:Collection .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/27>, <http://ios-regensburg.de/ethnodoc/def/concept/group/35>,
+    <http://ios-regensburg.de/ethnodoc/def/concept/group/79> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/33> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/37> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/53> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/49> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/05> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/15> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/77> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/79> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/35> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/27> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/33> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/37> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/53> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/49> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/05> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/15> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/77> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/79> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/35> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/27> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/33> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/37> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/53> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/49> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/05> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/15> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/77> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/country>
+  skos:member <https://d-nb.info/gnd/4028966-7> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/ethnicity>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/concept/group/79> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/year> skos:member
+    <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/measure_type>
+  skos:member <http://ios-regensburg.de/ethnodoc/def/measure/population> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/codes-used/unit> skos:member
+    <http://qudt.org/vocab/unit/Person> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/35/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/35>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "425703";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/27/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/27>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "3784353";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/33/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/33>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "810126";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/37/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/37>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "808921";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/53/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/53>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1415432";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/49/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/49>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "6547117";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/05/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/05>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "750431";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/15/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/15>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "55337";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/77/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/77>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "72736";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/79/1948/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/79>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "19883";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1948> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/35/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/35>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "466093";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/27/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/27>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "3975550";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/33/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/33>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "893247";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/37/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/37>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "998698";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/53/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/53>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1487100";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/49/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/49>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "7065923";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/05/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/05>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "754245";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/15/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/15>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "60536";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/77/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/77>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "84713";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/79/1953/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/79>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "18400";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1953> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/35/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/35>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "513832";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/27/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/27>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "4293809";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/33/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/33>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1045516";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/37/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/37>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "972960";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/53/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/53>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1589211";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/49/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/49>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "7806152";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/05/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/05>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "914733";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/15/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/15>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "20015";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/77/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/77>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "31674";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/79/1961/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/79>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "16488";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1961> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/35/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/35>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "508843";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/27/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/27>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "4526782";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/33/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/33>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1194784";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/37/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/37>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1729932";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/53/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/53>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1678032";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/49/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/49>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "8143246";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/05/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/05>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1309523";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/15/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/15>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "12785";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/77/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/77>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "78485";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/79/1971/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/79>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "31982";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1971> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/35/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/35>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "579043";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/27/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/27>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "4428043";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/33/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/33>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1341598";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/37/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/37>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1999890";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/53/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/53>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1753571";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/49/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/49>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "8140507";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/05/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/05>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "1730878";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/15/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/15>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "8712";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/77/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/77>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "168197";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
+
+<http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1/4028966-7/79/1981/population>
+  <http://ios-regensburg.de/ethnodoc/def/dimension/ethnicity> <http://ios-regensburg.de/ethnodoc/def/concept/group/79>;
+  qb:measureType <http://ios-regensburg.de/ethnodoc/def/measure/population>;
+  <http://ios-regensburg.de/ethnodoc/def/measure/population> "25117";
+  sdmx-attribute:unitMeasure <http://qudt.org/vocab/unit/Person>;
+  a qb:Observation;
+  qb:dataSet <http://ios-regensburg.de/ethnodoc/data/ethnodoc_yu_1948-81_1>;
+  sdmx-dimension:refArea <https://d-nb.info/gnd/4028966-7>;
+  sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/1981> .
